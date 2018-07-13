@@ -1,6 +1,8 @@
-# ReactJs Grunt Configuration
+# ReactJs Grunt build configuration
 
-React Grunt Configuration a small app to show the build process for react app.
+ReactJs Grunt build configuration is a small project to show the build process for ReatJs app using Grunt, Browserify, Babelify, etc.
+Sometimes it is required to integrate ReatJs app in to the **existing build process using Grunt** and without Webpack.
+
 In this configuration were used the following Grunt tasks:
  - borwserify (with babelify) - builds a bundle and transpiles ES6/JSX to plain javascript. 
  - uglify, htmlmin, cssmin - compress JavaScript, CSS, and HTML files respectively.
@@ -25,6 +27,21 @@ npm install
 grunt react_build_debug
 ```
 directory ./client will be created with non-minified files.
+
+### Tests
+
+Jest tests are configured for ReactJs app. To run tests using Grunt please execute:
+
+```sh
+grunt run:react_jest_tests
+```
+
+or NPM:
+
+```sh
+npm test
+```
+
 
 ## Production 
 You could build your project for production:

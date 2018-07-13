@@ -36,7 +36,7 @@ module.exports = function (grunt) {
     };
 
     /* Convert JSX to JS, prepare JS files for a browser and copy to the destination. */
-    const jsSourceFile = `${reactSourcePath}/app.js`;
+    const jsSourceFile = `${reactSourcePath}/index.js`;
     const jsDestinationFile = `${reactCompiledPath}/js/${reactFileName}.js`;
 
     browserify[reactTargetName] = { 
@@ -146,13 +146,8 @@ module.exports = function (grunt) {
     /* Jest tests */
     jestTestsTaskName = reactTargetName + '_jest_tests';
     run[jestTestsTaskName] = {
-        cmd: 'executable',
-        args: [
-          'arg1',
-          'arg2'
-        ]
+        exec: 'npm test'
       };
-
 
     /* Generate task names for react. */
 
