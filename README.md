@@ -13,12 +13,10 @@ npm install
 ## Development
 
 ```sh
-grunt react-build-debug
+grunt react_build_debug
 ```
+directory ./client will be created with non-minified files.
 
-### Description:
-
-Development server will run/watch code from -/source/ folder.
 ## Production 
 You could build your project for production:
 
